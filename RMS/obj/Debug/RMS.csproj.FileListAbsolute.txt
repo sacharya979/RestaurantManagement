@@ -1,0 +1,46 @@
+E:\Softtech park projects\RMS\RMS\bin\Debug\RMS.exe.config
+E:\Softtech park projects\RMS\RMS\bin\Debug\RMS.exe
+E:\Softtech park projects\RMS\RMS\bin\Debug\RMS.pdb
+E:\Softtech park projects\RMS\RMS\bin\Debug\EntityFramework.dll
+E:\Softtech park projects\RMS\RMS\bin\Debug\EntityFramework.SqlServer.dll
+E:\Softtech park projects\RMS\RMS\bin\Debug\EntityFramework.xml
+E:\Softtech park projects\RMS\RMS\bin\Debug\EntityFramework.SqlServer.xml
+E:\Softtech park projects\RMS\RMS\obj\Debug\RMS.csprojAssemblyReference.cache
+E:\Softtech park projects\RMS\RMS\obj\Debug\RMS.PLL.AddFoodCategory.resources
+E:\Softtech park projects\RMS\RMS\obj\Debug\RMS.PLL.AddWaiter.resources
+E:\Softtech park projects\RMS\RMS\obj\Debug\RMS.PLL.ChangePassword.resources
+E:\Softtech park projects\RMS\RMS\obj\Debug\RMS.PLL.FinalDashboard.resources
+E:\Softtech park projects\RMS\RMS\obj\Debug\RMS.LoginForm.resources
+E:\Softtech park projects\RMS\RMS\obj\Debug\RMS.Properties.Resources.resources
+E:\Softtech park projects\RMS\RMS\obj\Debug\RMS.User_Controls.AllFoodCategory.resources
+E:\Softtech park projects\RMS\RMS\obj\Debug\RMS.User_Controls.NewFoodItem.resources
+E:\Softtech park projects\RMS\RMS\obj\Debug\RMS.User_Controls.OrderUserControl.resources
+E:\Softtech park projects\RMS\RMS\obj\Debug\RMS.User_Controls.SalesReport.resources
+E:\Softtech park projects\RMS\RMS\obj\Debug\RMS.User_Controls.WaiterUC.resources
+E:\Softtech park projects\RMS\RMS\obj\Debug\RMS.csproj.GenerateResource.cache
+E:\Softtech park projects\RMS\RMS\obj\Debug\RMS.csproj.CopyComplete
+E:\Softtech park projects\RMS\RMS\obj\Debug\RMS.exe
+E:\Softtech park projects\RMS\RMS\obj\Debug\RMS.pdb
+C:\Users\Dell\Documents\RMS\RMS\bin\Debug\RMS.exe.config
+C:\Users\Dell\Documents\RMS\RMS\bin\Debug\RMS.exe
+C:\Users\Dell\Documents\RMS\RMS\bin\Debug\RMS.pdb
+C:\Users\Dell\Documents\RMS\RMS\bin\Debug\EntityFramework.dll
+C:\Users\Dell\Documents\RMS\RMS\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dell\Documents\RMS\RMS\bin\Debug\EntityFramework.xml
+C:\Users\Dell\Documents\RMS\RMS\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dell\Documents\RMS\RMS\obj\Debug\RMS.csprojAssemblyReference.cache
+C:\Users\Dell\Documents\RMS\RMS\obj\Debug\RMS.PLL.AddFoodCategory.resources
+C:\Users\Dell\Documents\RMS\RMS\obj\Debug\RMS.PLL.AddWaiter.resources
+C:\Users\Dell\Documents\RMS\RMS\obj\Debug\RMS.PLL.ChangePassword.resources
+C:\Users\Dell\Documents\RMS\RMS\obj\Debug\RMS.PLL.FinalDashboard.resources
+C:\Users\Dell\Documents\RMS\RMS\obj\Debug\RMS.LoginForm.resources
+C:\Users\Dell\Documents\RMS\RMS\obj\Debug\RMS.Properties.Resources.resources
+C:\Users\Dell\Documents\RMS\RMS\obj\Debug\RMS.User_Controls.AllFoodCategory.resources
+C:\Users\Dell\Documents\RMS\RMS\obj\Debug\RMS.User_Controls.NewFoodItem.resources
+C:\Users\Dell\Documents\RMS\RMS\obj\Debug\RMS.User_Controls.OrderUserControl.resources
+C:\Users\Dell\Documents\RMS\RMS\obj\Debug\RMS.User_Controls.SalesReport.resources
+C:\Users\Dell\Documents\RMS\RMS\obj\Debug\RMS.User_Controls.WaiterUC.resources
+C:\Users\Dell\Documents\RMS\RMS\obj\Debug\RMS.csproj.GenerateResource.cache
+C:\Users\Dell\Documents\RMS\RMS\obj\Debug\RMS.csproj.CopyComplete
+C:\Users\Dell\Documents\RMS\RMS\obj\Debug\RMS.exe
+C:\Users\Dell\Documents\RMS\RMS\obj\Debug\RMS.pdb

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbl_category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AddedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_fooditems">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Price" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="IsSpecial" Type="Byte" Nullable="false" />
+    <Property Name="Discount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ImageUrl" Type="String" MaxLength="255" FixedLength="true" Unicode="true" />
+    <Property Name="FoodName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_table">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TableNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AddedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_waiter">
+    <Key>
+      <PropertyRef Name="WaiterID" />
+    </Key>
+    <Property Name="WaiterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WaiterName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WaiterContact" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WaiterAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Userdetail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Usertype" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_image">
+    <Key>
+      <PropertyRef Name="pictrure" />
+    </Key>
+    <Property Name="id" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="pictrure" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_category" EntityType="Self.tbl_category" />
+    <EntitySet Name="tbl_fooditems" EntityType="Self.tbl_fooditems" />
+    <EntitySet Name="tbl_table" EntityType="Self.tbl_table" />
+    <EntitySet Name="tbl_waiter" EntityType="Self.tbl_waiter" />
+    <EntitySet Name="Userdetails" EntityType="Self.Userdetail" />
+    <EntitySet Name="tbl_image" EntityType="Self.tbl_image" />
+    <EntitySet Name="view_getfooditems" EntityType="RMSModel.view_getfooditems" />
+  </EntityContainer>
+  <EntityType Name="view_getfooditems">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="CategoryName" />
+      <PropertyRef Name="Price" />
+      <PropertyRef Name="Status" />
+      <PropertyRef Name="IsSpecial" />
+      <PropertyRef Name="FoodName" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="IsSpecial" Type="Byte" Nullable="false" />
+    <Property Name="Discount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FoodName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

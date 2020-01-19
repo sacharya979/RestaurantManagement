@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AddedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_fooditems">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Price" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="IsSpecial" Type="tinyint" Nullable="false" />
+    <Property Name="Discount" Type="varchar" MaxLength="50" />
+    <Property Name="ImageUrl" Type="nchar" MaxLength="255" />
+    <Property Name="FoodName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RMS.dbo.tbl_image' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tbl_image">
+    <Key>
+      <PropertyRef Name="pictrure" />
+    </Key>
+    <Property Name="id" Type="int" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="pictrure" Type="image" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_table">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TableNumber" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AddedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_waiter">
+    <Key>
+      <PropertyRef Name="WaiterID" />
+    </Key>
+    <Property Name="WaiterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WaiterName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="WaiterContact" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="WaiterAddress" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Userdetails">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Usertype" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RMS.dbo.view_getfooditems' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="view_getfooditems">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="CategoryName" />
+      <PropertyRef Name="Price" />
+      <PropertyRef Name="Status" />
+      <PropertyRef Name="IsSpecial" />
+      <PropertyRef Name="FoodName" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Price" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="IsSpecial" Type="tinyint" Nullable="false" />
+    <Property Name="Discount" Type="varchar" MaxLength="50" />
+    <Property Name="FoodName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="RMSModelStoreContainer">
+    <EntitySet Name="tbl_category" EntityType="Self.tbl_category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_fooditems" EntityType="Self.tbl_fooditems" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_table" EntityType="Self.tbl_table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_waiter" EntityType="Self.tbl_waiter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Userdetails" EntityType="Self.Userdetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_image" EntityType="Self.tbl_image" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tbl_image].[id] AS [id], 
+    [tbl_image].[name] AS [name], 
+    [tbl_image].[pictrure] AS [pictrure]
+    FROM [dbo].[tbl_image] AS [tbl_image]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="view_getfooditems" EntityType="Self.view_getfooditems" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [view_getfooditems].[Id] AS [Id], 
+    [view_getfooditems].[CategoryName] AS [CategoryName], 
+    [view_getfooditems].[Price] AS [Price], 
+    [view_getfooditems].[Status] AS [Status], 
+    [view_getfooditems].[IsSpecial] AS [IsSpecial], 
+    [view_getfooditems].[Discount] AS [Discount], 
+    [view_getfooditems].[FoodName] AS [FoodName]
+    FROM [dbo].[view_getfooditems] AS [view_getfooditems]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

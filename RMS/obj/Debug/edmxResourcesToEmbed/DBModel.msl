@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RMSModelStoreContainer" CdmEntityContainer="DBEntities">
+    <EntitySetMapping Name="tbl_category">
+      <EntityTypeMapping TypeName="RMSModel.tbl_category">
+        <MappingFragment StoreEntitySet="tbl_category">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_fooditems">
+      <EntityTypeMapping TypeName="RMSModel.tbl_fooditems">
+        <MappingFragment StoreEntitySet="tbl_fooditems">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="IsSpecial" ColumnName="IsSpecial" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="FoodName" ColumnName="FoodName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_table">
+      <EntityTypeMapping TypeName="RMSModel.tbl_table">
+        <MappingFragment StoreEntitySet="tbl_table">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TableNumber" ColumnName="TableNumber" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_waiter">
+      <EntityTypeMapping TypeName="RMSModel.tbl_waiter">
+        <MappingFragment StoreEntitySet="tbl_waiter">
+          <ScalarProperty Name="WaiterID" ColumnName="WaiterID" />
+          <ScalarProperty Name="WaiterName" ColumnName="WaiterName" />
+          <ScalarProperty Name="WaiterContact" ColumnName="WaiterContact" />
+          <ScalarProperty Name="WaiterAddress" ColumnName="WaiterAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Userdetails">
+      <EntityTypeMapping TypeName="RMSModel.Userdetail">
+        <MappingFragment StoreEntitySet="Userdetails">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Usertype" ColumnName="Usertype" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_image">
+      <EntityTypeMapping TypeName="RMSModel.tbl_image">
+        <MappingFragment StoreEntitySet="tbl_image">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="pictrure" ColumnName="pictrure" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="view_getfooditems">
+      <EntityTypeMapping TypeName="RMSModel.view_getfooditems">
+        <MappingFragment StoreEntitySet="view_getfooditems">
+          <ScalarProperty Name="FoodName" ColumnName="FoodName" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="IsSpecial" ColumnName="IsSpecial" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

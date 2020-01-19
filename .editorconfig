@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS0253: Possible unintended reference comparison; right hand side needs cast
+dotnet_diagnostic.CS0253.severity = none
