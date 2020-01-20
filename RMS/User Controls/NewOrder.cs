@@ -7,19 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using RMS.DAL;
 using System.Data.Objects;
 
 namespace RMS.User_Controls
 {
     public partial class NewOrder : UserControl
     {
-        DBConnection dbSql = new DBConnection();
-        DBEntities db = new DBEntities();
+       
     
         public NewOrder()
         {
-        view_getfooditems vf = new view_getfooditems();
+        //view_getfooditems vf = new view_getfooditems();
         InitializeComponent();
             showData();
 
@@ -27,22 +25,22 @@ namespace RMS.User_Controls
 
         private void NewOrder_Load(object sender, EventArgs e)
         {
-          List<tbl_category> li = db.tbl_category.OrderBy(x => x.Id).ToList();
+          //List<tbl_category> li = db.tbl_category.OrderBy(x => x.Id).ToList();
 
-            cmbCategoryName.DataSource = li;
-            cmbCategoryName.DisplayMember = "CategoryName";
-            cmbCategoryName.ValueMember = "CategoryName";
+          //  cmbCategoryName.DataSource = li;
+          //  cmbCategoryName.DisplayMember = "CategoryName";
+          //  cmbCategoryName.ValueMember = "CategoryName";
 
-            List<tbl_waiter> lis = db.tbl_waiter.OrderBy(x => x.WaiterID).ToList();
-            cmbWaiter.DataSource = lis;
-            cmbWaiter.DisplayMember = "WaiterName";
-            cmbWaiter.ValueMember = "WaiterName";
+          //  List<tbl_waiter> lis = db.tbl_waiter.OrderBy(x => x.WaiterID).ToList();
+          //  cmbWaiter.DataSource = lis;
+          //  cmbWaiter.DisplayMember = "WaiterName";
+          //  cmbWaiter.ValueMember = "WaiterName";
 
-            List<tbl_table> tb = db.tbl_table.OrderBy(x => x.Id).ToList();
-            cmbTable.DataSource = tb;
-            cmbTable.DisplayMember = "TableNumber";
-            cmbTable.ValueMember = "TableNumber";
-            showData();
+          //  List<tbl_table> tb = db.tbl_table.OrderBy(x => x.Id).ToList();
+          //  cmbTable.DataSource = tb;
+          //  cmbTable.DisplayMember = "TableNumber";
+          //  cmbTable.ValueMember = "TableNumber";
+          //  showData();
 
         }
 
@@ -62,23 +60,20 @@ namespace RMS.User_Controls
         }
         private void showData()
         {
-            var tmp = db.view_getfooditems.ToList();
-            dataGridFood.DataSource = tmp;
-            dataGridFood.Columns["Status"].Visible = false;
-            dataGridFood.Columns["IsSpecial"].Visible = false;
-            dataGridFood.Columns["Discount"].Visible = false;
+            //var tmp = db.view_getfooditems.ToList();
+            
 
-            DataGridViewImageColumn imageCol = new DataGridViewImageColumn();
-            imageCol.HeaderText = "Image";
-            imageCol.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            dataGridFood.Columns.Add(imageCol);
+            //DataGridViewImageColumn imageCol = new DataGridViewImageColumn();
+            //imageCol.HeaderText = "Image";
+            //imageCol.ImageLayout = DataGridViewImageCellLayout.Zoom;
+           
 
         }
 
         private void bunifuTextbox1_OnValueChange(object sender, EventArgs e)
         {
-            var data = db.tbl_fooditems.Where(a => a.FoodName.StartsWith(bunifuTextbox1.Text)).ToList();
-            dataGridFood.DataSource = data;
+            //var data = db.tbl_fooditems.Where(a => a.FoodName.StartsWith(bunifuTextbox1.Text)).ToList();
+            
           
     
 

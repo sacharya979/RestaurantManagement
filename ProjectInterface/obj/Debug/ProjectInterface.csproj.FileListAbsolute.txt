@@ -1,0 +1,15 @@
+E:\RMS\ProjectInterface\bin\Debug\ProjectInterface.dll.config
+E:\RMS\ProjectInterface\bin\Debug\ProjectInterface.dll
+E:\RMS\ProjectInterface\bin\Debug\ProjectInterface.pdb
+E:\RMS\ProjectInterface\bin\Debug\BO.dll
+E:\RMS\ProjectInterface\bin\Debug\EntityFramework.dll
+E:\RMS\ProjectInterface\bin\Debug\EntityFramework.SqlServer.dll
+E:\RMS\ProjectInterface\bin\Debug\BO.pdb
+E:\RMS\ProjectInterface\bin\Debug\BO.dll.config
+E:\RMS\ProjectInterface\bin\Debug\EntityFramework.xml
+E:\RMS\ProjectInterface\bin\Debug\EntityFramework.SqlServer.xml
+E:\RMS\ProjectInterface\obj\Debug\ProjectInterface.csprojAssemblyReference.cache
+E:\RMS\ProjectInterface\obj\Debug\ProjectInterface.csproj.CoreCompileInputs.cache
+E:\RMS\ProjectInterface\obj\Debug\ProjectInterface.csproj.CopyComplete
+E:\RMS\ProjectInterface\obj\Debug\ProjectInterface.dll
+E:\RMS\ProjectInterface\obj\Debug\ProjectInterface.pdb

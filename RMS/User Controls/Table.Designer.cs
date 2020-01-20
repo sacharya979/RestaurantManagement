@@ -147,8 +147,6 @@
             this.grdTable.RowTemplate.Height = 24;
             this.grdTable.Size = new System.Drawing.Size(1293, 661);
             this.grdTable.TabIndex = 8;
-            this.grdTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdTable_CellClick);
-            this.grdTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdTable_CellContentClick);
             // 
             // Id
             // 
@@ -293,7 +291,6 @@
             this.Controls.Add(this.panelMain);
             this.Name = "Table";
             this.Size = new System.Drawing.Size(1320, 775);
-            this.Load += new System.EventHandler(this.Table_Load);
             this.panelMain.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panelForGridView.ResumeLayout(false);

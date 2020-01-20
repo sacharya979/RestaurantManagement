@@ -1,4 +1,4 @@
-﻿using RMS.DAL;
+﻿
 using RMS.PLL;
 using System;
 using System.Collections.Generic;
@@ -15,21 +15,20 @@ namespace RMS
 {
     public partial class LoginForm : Form
     {
-        DBConnection db = new DBConnection();
+        
         public LoginForm()
         {
-           Thread trd = new Thread(new ThreadStart(formRun));
+            /*Thread trd = new Thread(new ThreadStart(formRun));
             trd.Start();
             Thread.Sleep(3000);
-            trd.Abort();
+            trd.Abort();*/
            
             InitializeComponent();
-
         }
 
         private void formRun()
         {
-            Application.Run(new SplashScreen());
+           /* Application.Run(new SplashScreen());*/
            
         }
 
@@ -40,28 +39,28 @@ namespace RMS
 
         private void btnLogin1_Click(object sender, EventArgs e)
         {
-            String sql = "Select * from Userdetail where Username='" + txtUserName.Text.Trim() + "' and password='" + txtPassword.Text.Trim() + "'";
-            DataTable dtbl = new DataTable();
-            dtbl = DBConnection.gettablebyquery(sql);
+            //String sql = "Select * from Userdetail where Username='" + txtUserName.Text.Trim() + "' and password='" + txtPassword.Text.Trim() + "'";
+            //DataTable dtbl = new DataTable();
+            //dtbl = DBConnection.gettablebyquery(sql);
 
-            if (dtbl.Rows.Count > 0)
-            {
-                for (int i = 0; i < dtbl.Rows.Count; i++)
-                {
+            //if (dtbl.Rows.Count > 0)
+            //{
+            //    for (int i = 0; i < dtbl.Rows.Count; i++)
+            //    {
 
-                    MessageBox.Show("You are login as" + dtbl.Rows[i][5]);
-                    FinalDashboard objDashboard = new FinalDashboard();
-                    objDashboard.Show();
-                    this.Hide();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Check your username and password");
-            }
-                    }
+            //        MessageBox.Show("You are login as" + dtbl.Rows[i][5]);
+            //        FinalDashboard objDashboard = new FinalDashboard();
+            //        objDashboard.Show();
+            //        this.Hide();
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Check your username and password");
+            //}
+        }
 
-                }
-            }
+    }
+}
 
 

@@ -1,4 +1,5 @@
-﻿using RMS.DAL;
+﻿
+using BLL;
 using RMS.User_Controls;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace RMS.PLL
 {
     public partial class FinalDashboard : Form
     {
+    
         public FinalDashboard()
         {
             InitializeComponent();

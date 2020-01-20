@@ -7,14 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using RMS.DAL;
+
 using RMS.PLL;
 
 namespace RMS.User_Controls
 {
     public partial class AllFoodItems : UserControl
     {
-        DBEntities db = new DBEntities();
+        
         public AllFoodItems()
         {
             InitializeComponent();
@@ -26,8 +26,8 @@ namespace RMS.User_Controls
         }
         public void getFoodItem()
         {
-            var tmp = db.view_getfooditems.ToList();
-            foodGridView.DataSource = db.view_getfooditems.ToList();
+            //var tmp = db.view_getfooditems.ToList();
+            //foodGridView.DataSource = db.view_getfooditems.ToList();
             
         }
 

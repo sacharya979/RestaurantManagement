@@ -17,7 +17,7 @@ namespace RMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FinalDashboard());
+            Application.Run(new AddFoodCategory());
         }
     }
 }

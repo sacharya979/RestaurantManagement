@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RMS.PLL;
-using RMS.DAL;
+
 
 namespace RMS.User_Controls
 {
     public partial class WaiterUC : UserControl
     {
-        tbl_waiter model = new tbl_waiter();
+       
         public WaiterUC()
         {
             InitializeComponent();
@@ -32,10 +32,10 @@ namespace RMS.User_Controls
             }
         void PopulateDataGridView()
         {
-            using (DBEntities db = new DBEntities())
-            {
-                grdWaiterList.DataSource = db.tbl_waiter.ToList<tbl_waiter>();
-            }
+            //using (DBEntities db = new DBEntities())
+            //{
+            //    grdWaiterList.DataSource = db.tbl_waiter.ToList<tbl_waiter>();
+            //}
         }
 
         private void WaiterUC_Load(object sender, EventArgs e)

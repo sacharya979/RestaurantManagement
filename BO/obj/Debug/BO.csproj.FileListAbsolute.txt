@@ -1,0 +1,11 @@
+E:\RMS\BO\bin\Debug\BO.dll.config
+E:\RMS\BO\bin\Debug\BO.dll
+E:\RMS\BO\bin\Debug\BO.pdb
+E:\RMS\BO\bin\Debug\EntityFramework.dll
+E:\RMS\BO\bin\Debug\EntityFramework.SqlServer.dll
+E:\RMS\BO\bin\Debug\EntityFramework.xml
+E:\RMS\BO\bin\Debug\EntityFramework.SqlServer.xml
+E:\RMS\BO\obj\Debug\BO.csproj.CoreCompileInputs.cache
+E:\RMS\BO\obj\Debug\BO.csproj.CopyComplete
+E:\RMS\BO\obj\Debug\BO.dll
+E:\RMS\BO\obj\Debug\BO.pdb

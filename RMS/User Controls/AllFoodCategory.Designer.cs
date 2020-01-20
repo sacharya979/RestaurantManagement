@@ -83,12 +83,9 @@
             // 
             // grdCategory
             // 
-            this.grdCategory.AllowUserToAddRows = false;
-            this.grdCategory.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.grdCategory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.grdCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdCategory.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.grdCategory.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdCategory.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
@@ -121,7 +118,7 @@
             this.grdCategory.HeaderForeColor = System.Drawing.Color.White;
             this.grdCategory.Location = new System.Drawing.Point(0, 3);
             this.grdCategory.Name = "grdCategory";
-            this.grdCategory.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.grdCategory.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -130,12 +127,11 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grdCategory.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.grdCategory.RowHeadersVisible = false;
             this.grdCategory.RowHeadersWidth = 51;
             this.grdCategory.RowTemplate.Height = 24;
             this.grdCategory.Size = new System.Drawing.Size(1293, 661);
             this.grdCategory.TabIndex = 8;
-            this.grdCategory.Click += new System.EventHandler(this.grdCategory_Click);
+            this.grdCategory.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grdCategory_RowHeaderMouseDoubleClick);
             // 
             // Id
             // 
@@ -143,6 +139,7 @@
             this.Id.HeaderText = "      S.N";
             this.Id.MinimumWidth = 4;
             this.Id.Name = "Id";
+            this.Id.Width = 414;
             // 
             // CategoryAdded
             // 
@@ -150,6 +147,7 @@
             this.CategoryAdded.HeaderText = "Category Added";
             this.CategoryAdded.MinimumWidth = 6;
             this.CategoryAdded.Name = "CategoryAdded";
+            this.CategoryAdded.Width = 414;
             // 
             // AddedDate
             // 
@@ -157,6 +155,7 @@
             this.AddedDate.HeaderText = "Added Date";
             this.AddedDate.MinimumWidth = 6;
             this.AddedDate.Name = "AddedDate";
+            this.AddedDate.Width = 414;
             // 
             // panelTopContainer
             // 
@@ -177,9 +176,8 @@
             this.cmbFilter.FormattingEnabled = true;
             this.cmbFilter.Location = new System.Drawing.Point(410, 38);
             this.cmbFilter.Name = "cmbFilter";
-            this.cmbFilter.Size = new System.Drawing.Size(382, 31);
+            this.cmbFilter.Size = new System.Drawing.Size(382, 29);
             this.cmbFilter.TabIndex = 18;
-            this.cmbFilter.SelectionChangeCommitted += new System.EventHandler(this.FilterList);
             // 
             // button3
             // 
@@ -190,7 +188,6 @@
             this.button3.Size = new System.Drawing.Size(49, 45);
             this.button3.TabIndex = 10;
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // bunifuMetroTextbox1
             // 
@@ -209,7 +206,6 @@
             this.bunifuMetroTextbox1.TabIndex = 9;
             this.bunifuMetroTextbox1.Text = "Please Search Food Category";
             this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuMetroTextbox1.OnValueChanged += new System.EventHandler(this.bunifuMetroTextbox1_OnValueChanged_1);
             // 
             // button2
             // 

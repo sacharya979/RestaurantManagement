@@ -31,14 +31,17 @@ namespace RMS.PLL
 
             DataTable table = new DataTable();
 
-
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.RowTemplate.Height = 100;
+            dataGridView1.AllowUserToAddRows = false;
 
             da.Fill(table);
 
-
+            dataGridView1.DataSource = table;
 
             DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
-  imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
+            imageColumn = (DataGridViewImageColumn)dataGridView1.Columns[3];
+            imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
 
             da.Dispose();
         }

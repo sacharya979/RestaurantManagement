@@ -1,4 +1,5 @@
-﻿using RMS.DAL;
+﻿using BLL;
+using BO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,31 +14,42 @@ namespace RMS.PLL
 {
     public partial class AddTable : Form
     {
-        DBEntities db = new DBEntities();
+      
         public AddTable()
         {
             InitializeComponent();
         }
-
+        BLLTable blt = new BLLTable();
         private void btnSave_Click(object sender, EventArgs e)
         {
-            tbl_table model = new tbl_table();
-            model.TableNumber = txtTableNumber.Text.Trim();
-            model.AddedDate = DateTime.Today;
-            using (DBEntities db = new DBEntities())
+            if (txtTableNumber.Text == "")
             {
-                db.tbl_table.Add(model);
-
-                db.SaveChanges();
+                MessageBox.Show("Please Enter Table Number", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtTableNumber.Focus();
+                return;
             }
-            MessageBox.Show("Table Added Successfully");
-            this.DialogResult = DialogResult.OK;
 
-        }
+            TableDetails td = new TableDetails();
+            td.TableNumber = txtTableNumber.Text;
 
-        private void AddTable_Load(object sender, EventArgs e)
-        {
-            
+            bool isexists = blt.CheckTable(txtTableNumber.Text);
+            if (isexists)
+            {
+                MessageBox.Show("Table Number Already Exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtTableNumber.Text = "";
+                txtTableNumber.Focus();
+            }
+            else
+            {
+                int i = blt.AddNewTable(td);
+                if (i > 0)
+                {
+                   
+                    MessageBox.Show("New Table Added Successfully", "Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtTableNumber.Text = "";
+                    txtTableNumber.Focus();
+                }
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)

@@ -2,81 +2,60 @@
 using System.Linq;
 using System.Windows.Forms;
 using RMS.PLL;
-using RMS.DAL;
 using System.Data.Objects;
+using BO;
+using BLL;
+using System.Collections.Generic;
 
 namespace RMS.User_Controls
 {
     public partial class AllFoodCategory : UserControl
     {
-       private DBEntities db = new DBEntities();
-        tbl_category model = new tbl_category();
+      
         public AllFoodCategory()
         {
             InitializeComponent();
 
         }
-
+        BLLCategory blc = new BLLCategory();
         private void button4_Click(object sender, EventArgs e)
         {
-            using (AddFoodCategory foodcat = new AddFoodCategory())
-            {
-                if(foodcat.ShowDialog()==DialogResult.OK)
-                {
-                    PopulateDataGridView();
-                }
-            }
-        }
+            AddFoodCategory adf = new AddFoodCategory();
+             adf.Show();
+           
 
-        private void bunifuMetroTextbox1_OnValueChanged(object sender, EventArgs e)
+            //if (adf.ShowDialog() == DialogResult.OK)
+            //{
+            //    LoadGrid();
+            //}
+
+        }
+        private void LoadGrid()
         {
-
-        }
-      public void PopulateDataGridView()
-        {
-            using (DBEntities db = new DBEntities())
-            {
-                grdCategory.DataSource = db.tbl_category.ToList<tbl_category>();
-                cmbFilter.DataSource = db.tbl_category.ToList();
-                cmbFilter.DisplayMember = "CategoryName";
-                cmbFilter.ValueMember = "CategoryName";
-            }
+            List<CategoryDetails> lstcd = blc.GetAllCategory();
+            grdCategory.DataSource = lstcd;
         }
 
-        public void getFoodItem()
-        {
-            grdCategory.DataSource = db.tbl_category.ToList();
-
-        }
+       
         private void AllFoodCategory_Load(object sender, EventArgs e)
         {
-            PopulateDataGridView();
+            LoadGrid();
         }
+        public int categoryId = 0;
+        private void grdCategory_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            categoryId = Convert.ToInt32(grdCategory.CurrentRow.Cells[0].Value.ToString());
 
-        private void grdCategory_Click(object sender, EventArgs e)
-        {
-            PopulateDataGridView();
-        }
-        public void searchData(string valueToSearch)
-        {
-           
-        }
-
-        private void FilterList(object sender, EventArgs e)
-        {
-            //String sql = "SELECT id, CategoryName, FoodName, Price from tbl_fooditems";
-            //cmbFilter.DataSource = sql;
-        }
-
-        private void bunifuMetroTextbox1_OnValueChanged_1(object sender, EventArgs e)
-        {
+            //this.Hide();
+            var category = blc.GetAllCategory().Where(s => s.Id == categoryId).FirstOrDefault();
+            AddFoodCategory frm = new AddFoodCategory();
+            frm.Show();
+            frm.txtCategoryName.Text = category.CategoryName;
+            frm.btnUpdate.Visible = true;
+            frm.btnUpdate.Enabled = true;
+            frm.btnSave.Enabled = false;
+            frm.btnSave.Visible = false;
             
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

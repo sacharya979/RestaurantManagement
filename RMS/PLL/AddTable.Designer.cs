@@ -52,7 +52,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(105, 14);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(146, 31);
+            this.label4.Size = new System.Drawing.Size(119, 25);
             this.label4.TabIndex = 56;
             this.label4.Text = "Add Table";
             // 
@@ -103,7 +103,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(16, 85);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 25);
+            this.label2.Size = new System.Drawing.Size(125, 20);
             this.label2.TabIndex = 62;
             this.label2.Text = "Table Number:";
             // 
@@ -191,7 +191,6 @@
             this.Name = "AddTable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddTable";
-            this.Load += new System.EventHandler(this.AddTable_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.ResumeLayout(false);

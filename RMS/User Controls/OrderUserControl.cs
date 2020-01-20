@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using RMS.DAL;
 
 namespace RMS.User_Controls
 {
@@ -20,21 +19,21 @@ namespace RMS.User_Controls
 
         private void btnNewOrder_Click(object sender, EventArgs e)
         {
-            NewOrder afc = new NewOrder();
-            MainControlClass.showControl(afc, panelMainContainer);
+            //NewOrder afc = new NewOrder();
+            //MainControlClass.showControl(afc, panelMainContainer);
 
         }
 
         private void OrderUserControl_Load(object sender, EventArgs e)
         {
-            NewOrder afc = new NewOrder();
-            MainControlClass.showControl(afc, panelMainContainer);
+            //NewOrder afc = new NewOrder();
+            //MainControlClass.showControl(afc, panelMainContainer);
         }
 
         private void btnOngoingOrder_Click(object sender, EventArgs e)
         {
-            OngoingOrder afc = new OngoingOrder();
-            MainControlClass.showControl(afc, panelMainContainer);
+            //OngoingOrder afc = new OngoingOrder();
+            //MainControlClass.showControl(afc, panelMainContainer);
         }
     }
 }

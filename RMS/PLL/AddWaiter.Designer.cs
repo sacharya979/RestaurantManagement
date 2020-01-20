@@ -207,7 +207,6 @@
             this.Name = "AddWaiter";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Waiter";
-            this.Load += new System.EventHandler(this.AddWaiter_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

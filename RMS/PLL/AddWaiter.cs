@@ -1,4 +1,4 @@
-﻿using RMS.DAL;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
+using BO;
 using RMS.User_Controls;
 
 namespace RMS.PLL
@@ -15,13 +17,13 @@ namespace RMS.PLL
 
     public partial class AddWaiter : Form
     {
-        DBEntities db = new DBEntities();
+        
         public AddWaiter()
         {
             InitializeComponent();
 
         }
-
+        BLLWaiter blw = new BLLWaiter();
         private void button3_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -29,20 +31,49 @@ namespace RMS.PLL
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            tbl_waiter foi = new tbl_waiter();
-            foi.WaiterName = txtWaiterName.Text.Trim();
-            foi.WaiterContact = txtContact.Text.Trim();
-            foi.WaiterAddress = txtAddress.Text.Trim();
-            db.tbl_waiter.Add(foi);
-            db.SaveChanges();
-            MessageBox.Show("New Waiter has been added Successfully");
-            this.DialogResult = DialogResult.OK;
-        }
-        
+            if (txtWaiterName.Text == "")
+            {
+                MessageBox.Show("Please Enter Waiter Name", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtWaiterName.Focus();
+                return;
+            }
+            if (txtContact.Text == "")
+            {
+                MessageBox.Show("Please Enter Waiter Contact Number", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtContact.Focus();
+                return;
+            }
+            if (txtAddress.Text == "")
+            {
+                MessageBox.Show("Please Enter Waiter Address", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtAddress.Focus();
+                return;
+            }
+            WaiterDetails wd = new WaiterDetails();
+            wd.WaiterName = txtWaiterName.Text;
+            wd.WaiterContact = txtContact.Text;
+            wd.WaiterAddress = txtAddress.Text;
 
-        private void AddWaiter_Load(object sender, EventArgs e)
-        {
-         
-        }
+            bool isexists = blw.CheckContact(txtContact.Text);
+            if (isexists)
+            {
+                MessageBox.Show("Waiter Already Exists in Database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtContact.Text = "";
+                txtContact.Focus();
+            }
+            else
+            {
+                int i = blw.AddNewWaiter(wd);
+                if (i > 0)
+                {
+
+                    MessageBox.Show("New Waiter Added Successfully", "Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtWaiterName.Text = "";
+                    txtContact.Text = "";
+                    txtAddress.Text = "";
+                    txtWaiterName.Focus();
+                }
+            }
+        }       
     }
 }

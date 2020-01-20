@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Linq;
-using RMS.DAL;
 using System.IO;
 
 namespace RMS.User_Controls
 {
     public partial class NewFoodItem : UserControl
     {
-        DBEntities db = new DBEntities();
+      
 
         public NewFoodItem()
         {
@@ -35,15 +34,15 @@ namespace RMS.User_Controls
 
         private void NewFoodItem_Load(object sender, EventArgs e)
         {
-            List<tbl_category> li = db.tbl_category.OrderBy(x => x.Id).ToList();
-            cmbCategoryName.DataSource = li;
-            cmbCategoryName.DisplayMember = "CategoryName";
-            cmbCategoryName.ValueMember = "CategoryName";
-            getFoodItem();
+            //List<tbl_category> li = db.tbl_category.OrderBy(x => x.Id).ToList();
+            //cmbCategoryName.DataSource = li;
+            //cmbCategoryName.DisplayMember = "CategoryName";
+            //cmbCategoryName.ValueMember = "CategoryName";
+            //getFoodItem();
         }
         public void getFoodItem()
         {
-            foodGridView.DataSource = db.view_getfooditems.ToList();
+           // foodGridView.DataSource = db.view_getfooditems.ToList();
 
 
 
@@ -56,41 +55,41 @@ namespace RMS.User_Controls
 
         private void btnAddFoodItems_Click(object sender, EventArgs e)
         {
-            if (labelForImage.Text.Equals("-1"))
-            {
-                MessageBox.Show("Please upload the image ....");
-            }
-            else
-            {
-                tbl_fooditems foi = new tbl_fooditems();
-                foi.CategoryName = cmbCategoryName.SelectedValue.ToString();
-                foi.FoodName = txtFoodName.Text.Trim();
-                foi.Price = txtPrice.Text.Trim();
-                if (btnRadioActive.Checked)
-                {
+            //if (labelForImage.Text.Equals("-1"))
+            //{
+            //    MessageBox.Show("Please upload the image ....");
+            //}
+            //else
+            //{
+            //    tbl_fooditems foi = new tbl_fooditems();
+            //    foi.CategoryName = cmbCategoryName.SelectedValue.ToString();
+            //    foi.FoodName = txtFoodName.Text.Trim();
+            //    foi.Price = txtPrice.Text.Trim();
+            //    if (btnRadioActive.Checked)
+            //    {
 
-                    foi.Status = 1;
-                }
-                else
-                {
-                    foi.Status = 0;
+            //        foi.Status = 1;
+            //    }
+            //    else
+            //    {
+            //        foi.Status = 0;
 
-                }
-                if (isSpecialCheckBox.Checked)
-                {
-                    foi.IsSpecial = 1;
-                }
-                else
-                {
-                    foi.IsSpecial = 0;
-                }
-                foi.Discount = txtDiscount.Text.Trim();
-                foi.ImageUrl = labelForImage.Text.Trim();
-                db.tbl_fooditems.Add(foi);
-                db.SaveChanges();
-                MessageBox.Show("Food Items Added Successfully");
-                getFoodItem();
-            }
+            //    }
+            //    if (isSpecialCheckBox.Checked)
+            //    {
+            //        foi.IsSpecial = 1;
+            //    }
+            //    else
+            //    {
+            //        foi.IsSpecial = 0;
+            //    }
+            //    foi.Discount = txtDiscount.Text.Trim();
+            //    foi.ImageUrl = labelForImage.Text.Trim();
+            //    db.tbl_fooditems.Add(foi);
+            //    db.SaveChanges();
+            //    MessageBox.Show("Food Items Added Successfully");
+            //    getFoodItem();
+            //}
         }
 
         private void btnRadioActive_CheckedChanged(object sender, EventArgs e)
